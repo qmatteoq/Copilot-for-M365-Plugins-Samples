@@ -15,17 +15,17 @@ TABLE OF CONTENTS
 
 Begin by clicking the "Try the new Teams" switch to move to the new Teams client application.
 
-> IMPORTANT - Microsoft Copilot for Microsoft 365 only works in the "New" Teams. Please don't miss this step! 
+> IMPORTANT - Copilot for Microsoft 365 only works in the "New" Teams. Please don't miss this step! 
 
 > If you restart your debugger after switching to "New" teams, you may get an error message after the debugger starts. This is a known problem; please just close the error dialog and continue testing.
 
-In the left navigation, click on "M365 Chat" to open Copilot.
+In the left navigation, click on "Copilot" to open Copilot. You can find it also in the Chat section.
 
 Check the lower left of the chat user interface, below the compose box. You should see a plugin icon 1️⃣ . Click this and enable the Northwind Inventory plugin 2️⃣ .
 
 ![Small panel with a toggle for each plugin](./images/03-02-Plugin-Panel.png)
 
-> NOTE: In the Ingite labs you may see a second "Northwind Inventory" app, with an icon that has a yellow background. We've hosted a copy of Northwind Inventory in Microsoft Azure and installed this app into the lab tenants. While it's there as a fallback, if you want to see the queries in your log window you need to use the copy with the blue background, which is the local running copy of the app.
+> NOTE: In the Build lab you may see a second "Northwind Inventory" app, with an icon that has a yellow background. We've hosted a copy of Northwind Inventory in Microsoft Azure and installed this app into the lab tenants. While it's there as a fallback, if you want to see the queries in your log window you need to use the copy with the blue background, which is the local running copy of the app.
 
 For best results, start a new chat by typing "New chat" before each prompt or set of related prompts.
 

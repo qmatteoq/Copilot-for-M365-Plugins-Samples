@@ -6,16 +6,16 @@ In this lab, you'll learn to use Teams Message Extensions as plugins in Microsof
 
 Northwind operates a specialty foods e-commerce business out of Walla Walla, Washington. In this lab, you will be working with the Northwind Inventory application, which provides access to product inventory and financial information.
 
-In Exercise 1, you'll set up your development environment and get the application running.
+In Exercise 1, you'll set up your development environment and get the application running. For the purpose of this lab, you won't need to follow the instructions, since the environment is already set up for you. However, you can follow the instructions at home to set up your own environment.
 
-Then in Exercise 2 you'll run the application as a [message extension](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) in Microsoft Teams and Outlook.
+Then in Exercise 2 you'll run the application as a plugin for Copilot for Microsoft 365. You will experiment with various prompts and you will observe how the plugin gets invoked using different parameters. As you chat with Copilot, you can watch the developer console to see queries it's making.
+
+In Exercise 3, you will learn how to add a new command to the application, so that you can expand the plugin capabilities and perform more tasks. 
+
+The lab concludes with an optional Exercise 4, which will guide you in testing the application as a [message extension](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) in Microsoft Teams and Outlook.
 The message extension allows users to find products and share them in conversations using adaptive cards. These cards allow users in the conversation to take actions such as updating the stock level or restocking a product; this is a huge convenience as people collaborate at work.
 
 ![Adaptive card displaying a product](./images/01-00-Product-card-only.png)
-
-In Exercise 3 you'll run the same application in Microsoft Copilot for Microsoft 365. As you chat with Copilot, you can watch the developer console to see queries it's making.
-
-Finally, in Exercise 4 you'll go on a tour of the code to see how it works in more depth. This lab is open source, so you can try it at home! If you don't yet have Copilot, everything else will still work.
 
 TABLE OF CONTENTS
 
