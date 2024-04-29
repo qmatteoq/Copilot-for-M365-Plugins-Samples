@@ -6,18 +6,18 @@ TABLE OF CONTENTS
 * [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment
 * [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
 * [Exercise 3]() - Add a new command
-* [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour (THIS PAGE)
-* [Optional - Messaging Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Messaging Extension
+* [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour **(THIS PAGE)**
+* [Optional - Message Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Message Extension
 
 ## Optional - Code tour
 
-In this optional section of the lab, you'll review the application code so that you can understand how a Messaging Extension works.
+In this optional section of the lab, you'll review the application code so that you can understand how a Message Extension works.
 
 ## Step 1 - Examine the manifest
 
 The core of any Microsoft 365 application is its application manifest. This is where you provide the information Microsoft 365 needs to access your application.
 
-In your working directory, open the [manifest.json](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/blob/main/samples/msgext-northwind-inventory-ts/appPackage/manifest.json) file. This JSON file is placed in a zip archive with two icon files to create the application package. The "icons" property includes paths to these icons.
+In your working directory, open the [manifest.json](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/blob/main/samples/msgext-northwind-inventory-ts/appPackage/manifest.json) file. This JSON file is placed in a zip archive with two icon files to create the application package. The `icons` property includes paths to these icons.
 
 ~~~json
 "icons": {

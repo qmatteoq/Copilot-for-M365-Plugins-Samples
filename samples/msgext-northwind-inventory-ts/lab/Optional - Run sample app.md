@@ -7,7 +7,7 @@ TABLE OF CONTENTS
 * [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
 * [Exercise 3]() - Add a new command
 * [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
-* [Optional - Message Extension](./Optional%20-%20Run%20sample%20app.md) (THIS PAGE)
+* [Optional - Message Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Message Extension **(THIS PAGE)**
 
 ## Optional - Run sample app as a message extension
 
@@ -66,8 +66,7 @@ You can cancel the order or modify the stock levels using the other two buttons.
 
 Back in Visual Studio Code, have a look at the app manifest, which is in a file called **manifest.json** in the **appPackage** directory. You'll notice that the app information that was displayed when you installed the app is all here.
 
-Scroll down a bit to `"composeExtensions:`.
-Compose extensions is the historical name for a message extension; the Northwind Inventory message extension is defined here.
+Scroll down a bit to `composeExtensions`. Compose extensions is the historical name for a message extension; the Northwind Inventory message extension is defined here.
 
 Here's an abbreviated version of that JSON for easy reference.
 
@@ -116,7 +115,7 @@ Enter "Beverages", "Dairy", or "Produce" into the "Discounts" tab, and you'll se
 
 ![Searching for beverages under the discount tab](./images/02-03-Test-Multi-02.png)
 
-Enter "high", "low", "0-10000", or "100000-" in the Revenue tab. It works, but it's not very user friendly. Copilot is smarter and, in Exercise 2, we have seen how it can look at the manifest and figure out how to use it:
+Enter "high", "low", "0-10000", or "100000-" in the Revenue tab. It works, but it's not very user friendly. Copilot is smarter and, in [Exercise 2](./Exercise%2002%20-%20Run%20in%20Copilot.md), we have seen how it can look at the manifest and figure out how to use it:
 
 ~~~json
 {

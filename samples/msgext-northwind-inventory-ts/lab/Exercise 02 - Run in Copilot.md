@@ -7,7 +7,7 @@ TABLE OF CONTENTS
 * [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin **(THIS PAGE)**
 * [Exercise 3]() - Add a new command
 * [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
-* [Optional - Messaging Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Messaging Extension
+* [Optional - Message Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Message Extension
 
 ## Exercise 3 - Run sample app as a Copilot for Microsoft 365 plugin
 
