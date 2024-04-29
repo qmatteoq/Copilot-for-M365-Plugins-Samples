@@ -2,11 +2,12 @@
 
 TABLE OF CONTENTS
 
-* [Welcome](./Exercise%2000%20-%20Welcome.md)
-* [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment  (THIS PAGE)
-* [Exercise 2](./Exercise%2002%20-%20Run%20sample%20app.md) - Run the sample Message Extension
-* [Exercise 3](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
-* [Exercise 4](./Exercise%2004%20-%20Code%20tour.md) - Code tour
+* [Welcome](./Exercise%2000%20-%20Welcome.md) 
+* [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment (THIS PAGE)
+* [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
+* [Exercise 3]() - Add a new command
+* [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
+* [Optional - Messaging Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Messaging Extension
 
 ## Exercise 1 - Set up your development environment
 
@@ -14,25 +15,25 @@ TABLE OF CONTENTS
 
 **To complete these labs, you will need a login to a Microsoft 365 subscription with permission to upload applications. To complete Lab 3, this account must also be licensed for Microsoft Copilot for Microsoft 365.**
 
-If you are attending the lab at Build, the workstation already includes the following prerequisites.
+If you are attending the lab at Build, the workstation already meets these requirements and it includes the following prerequisites.
 
 1. [Visual Studio Code](https://code.visualstudio.com/) (latest version)
 
 2. [NodeJS version 18.x](https://nodejs.org/download/release/v18.18.2/)
 
-3. [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/) (OPTIONAL) - Download this if you want to view and edit the Northwind database used in this sample
+3. [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/) (OPTIONAL) - Use it only if you want to view and edit the Northwind database used in this sample
 
 ## Step 2 - Reviewing the sample code
 
-You will find the sample code for this lab already downloaded in the C:\src\NorthwindInventory folder. This lab will refer to this as your "working folder" since this is where you'll be working.
+You will find the sample code for this lab already downloaded in the **C:\src\msgext-northwind-inventory-ts** folder. This lab will refer to this as your "working folder", since this is where you'll be working.
 
 ## Step 3 - Reviewing sample documents to your test user's OneDrive
 
 The sample application includes some documents for Copilot to reference during the labs. In this step, you will check that these files are available on your user's OneDrive so Copilot can find them. Depending on how the tenant is set up, you may be asked to set up multi-factor authentication as part of this process.
 
-Open your browser and browse to Microsoft 365 ([https://www.office.com/](https://www.office.com/)). Log in using the Microsoft 365 account you will be using throughout the lab. You may be asked to set up multi-factor authentication.
+Open your browser and browse to the Microsoft 365 portal ([https://www.office.com/](https://www.office.com/)). Log in using the Microsoft 365 account you will be using throughout the lab. You may be asked to set up multi-factor authentication.
 
-Verify that you can find them by entering the word "agreement" in the search box. You should see several contracts that have been placed in SharePoint.
+Verify that you can find them by entering the word **agreement** in the search box. You should see several contracts that have been placed in SharePoint.
 
 ![Search box with the word agreement](./images/01-02-CheckSampleFiles.png)
 
@@ -56,11 +57,12 @@ Under "Accounts" click "Sign in to Microsoft 365"2️⃣ and log in with the Mic
 
 A browser window will pop up and offer to log into Microsoft 365. When it says "You are signed in now and close this page", please do so.
 
-Now verify that the "Sideloading enabled" checker has a green checkmark. If it doesn't, that means that your user account doesn't have permission to upload Teams applications. This permission is turned on in the lab environment. If you want to learn how you can turn it on your own tenant,  here are [instructions for enabling users to upload custom apps](https://learn.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps)
+Now verify that the "Sideloading enabled" checker has a green checkmark. If it doesn't, that means that your user account doesn't have permission to upload Teams applications. This permission is turned on in the lab environment. If you want to learn how you can turn it on your own tenant, here are [instructions for enabling users to upload custom apps](https://learn.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps)
 
 ![Checking that sideloading is enabled](./images/01-04-Setup-TTK-03.png)
 
 ## Congratulations
 
 You have completed Exercise 1.
-Please proceed to [Exercise 2](./Exercise%2002%20-%20Run%20sample%20app.md) in which you will run the sample application.
+Please proceed to [Exercise 2](./Exercise%2002%20-%20Run%20sample%20app.md) in which you will run the sample application as a Copilot for Microsoft 365 plugin.
+
