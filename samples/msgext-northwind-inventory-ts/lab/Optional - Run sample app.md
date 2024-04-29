@@ -2,37 +2,16 @@
 
 TABLE OF CONTENTS
 
-* [Welcome](./Exercise%2000%20-%20Welcome.md)
+* [Welcome](./Exercise%2000%20-%20Welcome.md) 
 * [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment
-* [Exercise 2](./Exercise%2002%20-%20Run%20sample%20app.md) - Run the sample Message Extension  (THIS PAGE)
-* [Exercise 3](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
-* [Exercise 4](./Exercise%2004%20-%20Code%20tour.md) - Code tour
+* [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
+* [Exercise 3]() - Add a new command
+* [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
+* [Optional - Message Extension](./Optional%20-%20Run%20sample%20app.md) (THIS PAGE)
 
-## Exercise 2 - Run sample app
+## Optional - Run sample app as a message extension
 
-## Step 1 - Set up the project for first use
-
-Open your working folder in Visual Studio Code.
-
-Teams Toolkit stores environment variables in the **env** folder, and it will fill in all the values automatically when you start your project the first time. However there's one value that's specific to the sample application, and that's the connection string for accessing the Northwind database.
-
-In this project, the Northwind database is stored in Azure Table Storage; when you're debugging locally, it uses the [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azurite?tabs=visual-studio) storage emulator. That's mostly built into the project, but the project won't build unless you provide the connection string.
-
-The necessary setting is provided in a file **env/.env.local.user.sample**. Make a copy of this file in the **env** folder, and call it **.env.local.user**. This is where secret or sensitive settings are stored.
-
-If you're not sure how to do this, here are the steps in Visual Studio Code. Expand the **env** folder and right click on **.env.local.user.sample**. Select "Copy". Then right click anywhere in the **env** folder and select "Paste". You will have a new file called **.env.local.user copy.sample**. Use the same context menu to rename the file to **.env.local.user** and you're done.
-
-![Copy .env.local.user.sample to .env.local.user](./images/02-01-Setup-Project-01.png)
-
-The resulting **.env.local.user** file should contain this line:
-
-~~~text
-SECRET_STORAGE_ACCOUNT_CONNECTION_STRING=UseDevelopmentStorage=true
-~~~
-
-(OK it's not a secret! But it could be; if you deploy the project to Azure it will be!)
-
-## Step 2 - Run the application locally
+## Step 1 - Run the application locally
 
 Click F5 to start debugging, or click the start button 1️⃣. You will have an opportunity to select a debugging profile; select Debug in Teams (Edge) 2️⃣ or choose another profile.
 
@@ -57,7 +36,7 @@ Click "Add" to add Northwind Inventory as a personal application.
 
 You should be directed to a chat within the application, however you could use the app in any chat.
 
-## Step 3 - Test in Microsoft Teams
+## Step 2 - Test in Microsoft Teams
 
 In any Teams chat - including the Northwind Inventory chat - begin typing a message 1️⃣ that refers to a product. Then, to insert an adaptive card for the product, click the + 2️⃣ . In the fly-up panel, select the Northwind Inventory application you just installed 3️⃣ .
 
@@ -83,7 +62,7 @@ Notice that there is no chai on order 1️⃣ . The authors of this lab are big 
 
 You can cancel the order or modify the stock levels using the other two buttons.
 
-## Step 4 - Advanced queries
+## Step 3 - Advanced queries
 
 Back in Visual Studio Code, have a look at the app manifest, which is in a file called **manifest.json** in the **appPackage** directory. You'll notice that the app information that was displayed when you installed the app is all here.
 
@@ -137,7 +116,7 @@ Enter "Beverages", "Dairy", or "Produce" into the "Discounts" tab, and you'll se
 
 ![Searching for beverages under the discount tab](./images/02-03-Test-Multi-02.png)
 
-Enter "high", "low", "0-10000", or "100000-" in the Revenue tab. It works, but it's not very user friendly. We're counting on Copilot to look at the manifest and figure out how to use it:
+Enter "high", "low", "0-10000", or "100000-" in the Revenue tab. It works, but it's not very user friendly. Copilot is smarter and, in Exercise 2, we have seen how it can look at the manifest and figure out how to use it:
 
 ~~~json
 {
@@ -162,7 +141,7 @@ Enter "high", "low", "0-10000", or "100000-" in the Revenue tab. It works, but i
 
 ![Searching for high on the revenue tab](./images/02-03-Test-Multi-03.png)
 
-The parameter description succinctly explains how the queries should be written, and Copilot will read this to answer prompts calling for high revenue products, or products with less than 10,000 items.
+The parameter `description` succinctly explains how the queries should be written, and we have learned in Exercise 2 how Copilot will read this to answer prompts calling for high revenue products, or products with less than 10,000 items.
 
 Now examine the first command again. You'll notice it has 5 parameters!
 
@@ -201,7 +180,7 @@ Now examine the first command again. You'll notice it has 5 parameters!
 ]
 ~~~
 
-Unfortunately, Teams can only display the first parameter, but Copilot can use all 5. This will allow it to do more advanced queries of the Northwind inventory data.
+Unfortunately, Teams can only display the first parameter, but we have seen how Copilot can use all 5. This will allow it to do more advanced queries of the Northwind inventory data.
 
 As a work-around to the Teams UI limitation, in the "Northwind Inventory" tab, the application will accept up to 5 parameters comma separated, using the format:
 
@@ -261,5 +240,4 @@ The code reads the Products table on each query, but the other tables are only a
 
 ## Congratulations
 
-You have completed Exercise 2.
-Please proceed to [Exercise 3](./Exercise%2003%20-%20Run%20in%20Copilot.md) in which you will run the sample application in Microsoft Copilot for Microsoft 365!
+You have completed the optional exercise about using the Northwind Inventory application as a message extension in Microsoft Teams and Outlook.

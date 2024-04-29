@@ -2,15 +2,16 @@
 
 TABLE OF CONTENTS
 
-* [Welcome](./Exercise%2000%20-%20Welcome.md)
+* [Welcome](./Exercise%2000%20-%20Welcome.md) 
 * [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment
-* [Exercise 2](./Exercise%2002%20-%20Run%20sample%20app.md) - Run the sample Message Extension
-* [Exercise 3](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
-* [Exercise 4](./Exercise%2004%20-%20Code%20tour.md) - Code tour  (THIS PAGE)
+* [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
+* [Exercise 3]() - Add a new command
+* [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour (THIS PAGE)
+* [Optional - Messaging Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Messaging Extension
 
 ## Optional - Code tour
 
-In this optional section of the lab, you'll review the application code and learn how to implement your own Message Extension plug-in.
+In this optional section of the lab, you'll review the application code so that you can understand how a Messaging Extension works.
 
 ## Step 1 - Examine the manifest
 
@@ -25,9 +26,9 @@ In your working directory, open the [manifest.json](https://github.com/OfficeDev
 },
 ~~~
 
-Notice the token `${{TEAMSFX_ENV}}` in one of the icon names. Teams Toolkit will replace this token with your environment name, such as "local" or "dev" (for an Azure deployment in development). Thus, the icon color will change depending on the environment.
+Notice the token `${{TEAMSFX_ENV}}` in one of the icon names. Teams Toolkit will replace this token with your environment name, such as `local` or `dev` (for an Azure deployment in development). Thus, the icon color will change depending on the environment.
 
-Now have a look at the "name" and "description". Notice that the description is quite long! This is important so both users and Copilot can learn what your application does and when to use it.
+Now have a look at the `name` and `description`. Notice that the description is quite long! This is important so both users and Copilot can learn what your application does and when to use it.
 
 ~~~json
     "name": {
@@ -40,7 +41,8 @@ Now have a look at the "name" and "description". Notice that the description is 
     },
 ~~~
 
-Scroll down a bit to "composeExtensions". Compose extension is the historical term for message extension; this is where the app's message extensions are defined.
+
+Scroll down a bit to `composeExtensions`. Compose extension is the historical term for message extension; this is where the app's message extensions are defined.
 
 Within this is a bot, with the ID supplied by Teams Toolkit.
 
@@ -55,7 +57,7 @@ Within this is a bot, with the ID supplied by Teams Toolkit.
 
 Message extensions communicate using the Azure Bot Framework; this provides a fast and secure communication channel between Microsoft 365 and your application. When you first ran your project, Teams Toolkit registered a bot, and will place its bot ID here.
 
-This message extension has three commands, which are defined in the "commands" array. Let's skip the first command for a moment since it's the most complex one. The second command looks like this:
+This message extension has three commands, which are defined in the `commands` array. Let's skip the first command for a moment since it's the most complex one. The second command looks like this:
 
 ~~~json
 {
@@ -78,7 +80,7 @@ This message extension has three commands, which are defined in the "commands" a
 },
 ~~~
 
-This allows Copilot (or a user) to search for discounted products within a Northwind category. This command accepts a single parameter, "categoryName". The 3rd command is similar.
+This allows Copilot (or a user) to search for discounted products within a Northwind category. This command accepts a single parameter, `categoryName`. The 3rd command is similar.
 
 ~~~json
 {
@@ -101,9 +103,9 @@ This allows Copilot (or a user) to search for discounted products within a North
 }
 ~~~
 
-What's interesting here is that we invented a really simple query language here, which is explained in the description of the "revenueRange" parameter. Copilot is able to learn this language from the description and translate the intent of a prompt into the correct query.
+What's interesting here is that we invented a really simple query language here, which is explained in the description of the `revenueRange` parameter. Copilot is able to learn this language from the description and translate the intent of a prompt into the correct query.
 
-OK now let's move back to the first command, "inventorySearch". It has 5 parameters, which allows for much more sophisticated queries.
+OK now let's move back to the first command, `inventorySearch`. It has 5 parameters, which allows for much more sophisticated queries.
 
 ~~~json
 {
@@ -156,7 +158,7 @@ Copilot is able to fill these in, again based on the descriptions, and the messa
 
 Now open the file **src/searchApp.ts**. This application contains the "bot" code, which communicates with the Azure Bot Framework using the [Bot Builder SDK](https://learn.microsoft.com/azure/bot-service/index-bf-sdk?view=azure-bot-service-4.0).
 
-Notice that the bot extends an SDK class **TeamsActivityHandler**.
+Notice that the bot extends an SDK class `TeamsActivityHandler`.
 
 ~~~typescript
 export class SearchApp extends TeamsActivityHandler {
@@ -167,7 +169,7 @@ export class SearchApp extends TeamsActivityHandler {
   ...
 ~~~
 
-By overriding the methods of the **TeamsActivityHandler**, the application is able to handle messages (called "activities") coming from Microsoft 365.
+By overriding the methods of the `TeamsActivityHandler` the application is able to handle messages (called "activities") coming from Microsoft 365.
 
 The first of these is a Messaging Extension Query activity ("messaging extension" is another historical name for a message extension). This function is called when a user types into a message extension or when Copilot calls it.
 
@@ -395,4 +397,4 @@ As you can see, the code obtains these two values, updates the database, and the
 
 ## Congratulations
 
-You have completed Exercise 4 and the Microsoft Copilot for Microsoft 365 Messaging Extensions plugin lab. Thanks very much for doing these labs!
+You have completed the Optional exercise which guides you through a tour of the code of the sample application.

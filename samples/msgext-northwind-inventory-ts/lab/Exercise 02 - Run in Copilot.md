@@ -106,7 +106,7 @@ Try using these adaptive cards to take action on the products. Notice that this 
 
 Feel free to try making up your own prompts. You'll find that they only work if Copilot is able to query the plugin for the required information. This underscores the need to anticipate the kinds of prompts users will issue, and providing corresponding types of queries for each one. Having multiple parameters will make this more powerful!
 
-## Step 2 - Test in Microsoft Copilot for Microsoft 365 (multiple parameters)
+## Step 4 - Test in Microsoft Copilot for Microsoft 365 (multiple parameters)
 
 In this exercise, you'll try some prompts that exercise the multi-parameter feature in the sample plugin. These prompts will request data that can be retrieved by name, category, inventory status, supplier city, and stock level, as defined in [the manifest](../appPackage/manifest.json).
 
