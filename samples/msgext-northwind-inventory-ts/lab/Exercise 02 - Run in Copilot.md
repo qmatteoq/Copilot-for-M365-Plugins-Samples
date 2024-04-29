@@ -4,12 +4,12 @@ TABLE OF CONTENTS
 
 * [Welcome](./Exercise%2000%20-%20Welcome.md) 
 * [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment
-* [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin (THIS PAGE)
+* [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin **(THIS PAGE)**
 * [Exercise 3]() - Add a new command
 * [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
 * [Optional - Messaging Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Messaging Extension
 
-## Exercise 3 -
+## Exercise 3 - Run sample app as a Copilot for Microsoft 365 plugin
 
 ## Step 1 - Set up the project for first use
 
@@ -39,7 +39,7 @@ Click F5 to start debugging, or click the start button 1️⃣. You will have an
 
 ![Run application locally](./images/02-02-Run-Project-01.png)
 
-If you see this screen, you need to fix your **env/.env.local.user** file; this is explained in the previous step.
+If you see the following screen, you need to fix your **env/.env.local.user** file; this is explained in the previous step.
 
 ![Error is displayed because of a missing environment variable](./images/02-01-Setup-Project-06.png)
 

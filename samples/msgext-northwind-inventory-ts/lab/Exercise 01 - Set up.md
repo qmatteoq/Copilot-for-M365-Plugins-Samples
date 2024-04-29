@@ -3,7 +3,7 @@
 TABLE OF CONTENTS
 
 * [Welcome](./Exercise%2000%20-%20Welcome.md) 
-* [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment (THIS PAGE)
+* [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment **(THIS PAGE)**
 * [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin
 * [Exercise 3]() - Add a new command
 * [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
@@ -13,7 +13,7 @@ TABLE OF CONTENTS
 
 ## Step 1 - Install prerequisites
 
-**To complete these labs, you will need a login to a Microsoft 365 subscription with permission to upload applications. To complete Lab 3, this account must also be licensed for Microsoft Copilot for Microsoft 365.**
+**To complete these labs, you will need a login to a Microsoft 365 subscription with permission to upload applications. Your account must also be licensed for Microsoft Copilot for Microsoft 365.**
 
 If you are attending the lab at Build, the workstation already meets these requirements and it includes the following prerequisites.
 
@@ -64,5 +64,5 @@ Now verify that the "Sideloading enabled" checker has a green checkmark. If it d
 ## Congratulations
 
 You have completed Exercise 1.
-Please proceed to [Exercise 2](./Exercise%2002%20-%20Run%20sample%20app.md) in which you will run the sample application as a Copilot for Microsoft 365 plugin.
+Please proceed to [Exercise 2](./Exercise%2002%20-%20Run%20in%20Copilot.md) in which you will run the sample application as a Copilot for Microsoft 365 plugin.
 
