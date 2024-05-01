@@ -5,11 +5,11 @@ TABLE OF CONTENTS
 * [Welcome](./Exercise%2000%20-%20Welcome.md) 
 * [Exercise 1](./Exercise%2001%20-%20Set%20up.md) - Set up your development Environment
 * [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin **(THIS PAGE)**
-* [Exercise 3]() - Add a new command
+* [Exercise 3](./Exercise%2003%20-%20Add%20a%20new%20command.md) - Add a new command
 * [Optional - Code Tour](./Optional%20-%20Code%20tour.md) - Code tour
 * [Optional - Message Extension](./Optional%20-%20Run%20sample%20app.md) - Run the sample as a Message Extension
 
-## Exercise 3 - Run sample app as a Copilot for Microsoft 365 plugin
+## Exercise 2 - Run sample app as a plugin for Microsoft 365 Copilot
 
 ## Step 1 - Set up the project for first use
 
