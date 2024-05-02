@@ -45,7 +45,7 @@ To do this you'll complete five tasks.
 }
 ```
 ```
-Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the SearchCommand.ts file. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
+Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the discount/product/revenue/SearchCommand.ts files. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
 ```
 
 # Step 2 - Create a handler for the 'companySearch' command
@@ -129,10 +129,10 @@ Note that in the UI-based operation of the Message Extension / plugin, this comm
 | ------------- | ----------- | ------------- |
 | Customer      | Customer Id | Customer Name |
 | Orders        | Order Id    | Customer Id   |
-| Order Details | Product       | Order Id      |
+| OrderDetail | Product       | Order Id      |
 
 Here's how it works: 
-Use the Customer table to find the Customer Id with the Customer Name. Query the Orders table with the Customer Id to retrieve the associated Order Ids. For each Order Id, find the associated products in the Order Details table. Finally, return a list of products ordered by the specified company name.
+Use the Customer table to find the Customer Id with the Customer Name. Query the Orders table with the Customer Id to retrieve the associated Order Ids. For each Order Id, find the associated products in the OrderDetail table. Finally, return a list of products ordered by the specified company name.
 
 1. Open **.\src\northwindDB\products.ts**
 
