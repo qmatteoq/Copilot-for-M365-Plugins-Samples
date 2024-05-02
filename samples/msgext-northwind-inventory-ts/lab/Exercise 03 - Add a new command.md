@@ -26,26 +26,26 @@ To do this you'll complete five tasks.
 
 ```json
 {
-        "id": "companySearch",
-        "context": [
-            "compose",
-            "commandBox"
-        ],
-        "description": "Given a company name, search for products ordered by that company",
-        "title": "Customer",
-        "type": "query",
-        "parameters": [
-            {
-                "name": "companyName",
-                "title": "Company name",
-                "description": "The company name to find products ordered by that company",
-                "inputType": "text"
-            }
-        ]
-    }
+    "id": "companySearch",
+    "context": [
+        "compose",
+        "commandBox"
+    ],
+    "description": "Given a company name, search for products ordered by that company",
+    "title": "Customer",
+    "type": "query",
+    "parameters": [
+        {
+            "name": "companyName",
+            "title": "Company name",
+            "description": "The company name to find products ordered by that company",
+            "inputType": "text"
+        }
+    ]
+}
 ```
 ```
-Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the *SearchCommand.ts files. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
+Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the SearchCommand.ts file. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
 ```
 
 # Step - 2 Create a handler for the 'companySearch' command
@@ -93,10 +93,10 @@ const COMMAND_ID = "companySearch";
     };
 }
 ```
-Note that you will implement searchProductsByCustomer in the next step.
+Note that you will implement `searchProductsByCustomer` in the next step.
 
 # Step - 3 Update the command routing
-In this step you will route the '**companySearch**' command to the handler you implemented in the previous step.
+In this step you will route the `companySearch` command to the handler you implemented in the previous step.
 
 2. Open **searchApp.ts** and add the following. Underneath this line:
 ```javascript
@@ -127,14 +127,14 @@ Note that in the UI-based operation of the Message Extension / plugin, this comm
 
 1. Open **.\src\northwindDB\products.ts**
 
-2. Update the 'import' statement on line 1 to include Order and Customer. It should look as follows
+2. Update the `import` statement on line 1 to include Order and Customer. It should look as follows
 ```javascript
 import {
     TABLE_NAME, Product, ProductEx, Supplier, Category, OrderDetail,
     Order, Customer
 } from './model';
 ```
-3. Add the new function **searchProductsByCustomer**
+3. Add the new function `searchProductsByCustomer()`
 
 Underneath this line:
 ```javascript
@@ -149,7 +149,7 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
     let customers = await loadReferenceData<Customer>(TABLE_NAME.CUSTOMER);
     let customerId="";
     for (const c in customers) {
-        if (customers[c].CompanyName.toLowerCase() === companyName.toLowerCase()) {
+        if (customers[c].CompanyName.toLowerCase().includes(companyName.toLowerCase())) {
             customerId = customers[c].CustomerID;
             break;
         }
@@ -194,10 +194,10 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
 
     b. Right click on the 'Northwest Inventory' icon and select uninstall.
 
-2. Like you did in [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin, start the app in Visual Studio Code using teh  'Debug in Teams (Edge)' profile.
+2. Like you did in [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin, start the app in Visual Studio Code using the **Debug in Teams (Edge)** profile.
 
-3. In Teams click on 'Chat' and then 'Copilot'. Copilot should be the top-most option.
-4. Click on the 'Plugin icon' and select 'Northwind Inventory' to enable the plugin.
+3. In Teams click on **Chat** and then **Copilot**. Copilot should be the top-most option.
+4. Click on the **Plugin icon** and select **Northwind Inventory** to enable the plugin.
 5. Enter the prompt: 
 ```
 What are the products ordered by 'Consolidated Holdings' in Northwind Inventory?

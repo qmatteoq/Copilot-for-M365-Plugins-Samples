@@ -44,7 +44,7 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
     let customers = await loadReferenceData<Customer>(TABLE_NAME.CUSTOMER);
     let customerId="";
     for (const c in customers) {
-        if (customers[c].CompanyName.toLowerCase() === companyName.toLowerCase()) {
+        if (customers[c].CompanyName.toLowerCase().includes(companyName.toLowerCase())) {
             customerId = customers[c].CustomerID;
             break;
         }
