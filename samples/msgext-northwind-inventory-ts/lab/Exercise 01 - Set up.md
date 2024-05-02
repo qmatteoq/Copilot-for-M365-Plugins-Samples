@@ -1,4 +1,4 @@
-# Building Message Extensions for Microsoft Copilot for Microsoft 365
+# Building plugins for Microsoft Copilot for Microsoft 365
 
 TABLE OF CONTENTS
 
@@ -49,7 +49,7 @@ In the left sidebar, select the Extensions icon1️⃣. Enter the word "teams" i
 
 ![Installing Teams Toolkit in Visual Studio Code](./images/01-04-Install-TTK-01.png)
 
-Now select the Teams Toolkit icon in the left 1️⃣ . If it offers options to create a new project, you're probably in the wrong folder. In the Visual Studio Code file menu select "Open Folder" and directly open the **msgext-northwind-inventory-ts** folder. You should see sections for Accounts, Environment, etc. as shown below.
+Now select the Teams Toolkit icon in the left 1️⃣ . If it offers options to create a new project, you're probably in the wrong folder. In the Visual Studio Code file menu select "Open Folder" and directly open the **C:\src\msgext-northwind-inventory-ts** folder. You should see sections for Accounts, Environment, etc. as shown below.
 
 Under "Accounts" click "Sign in to Microsoft 365"2️⃣ and log in with the Microsoft 365 account provided by the lab instructors. 
 
