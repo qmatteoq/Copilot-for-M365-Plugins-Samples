@@ -48,7 +48,7 @@ To do this you'll complete five tasks.
 Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the SearchCommand.ts file. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
 ```
 
-# Step - 2 Create a handler for the 'companySearch' command
+# Step 2 - Create a handler for the 'companySearch' command
 We will use a lot of the code created for the other handlers. 
 
 1. In VS Code copy '**productSearchCommand.ts**' and paste into the same folder to create a copy. Rename this file **customerSearchCommand.ts**.
@@ -93,9 +93,9 @@ const COMMAND_ID = "companySearch";
     };
 }
 ```
-Note that you will implement `searchProductsByCustomer` in the next step.
+Note that you will implement `searchProductsByCustomer` in Step 4.
 
-# Step - 3 Update the command routing
+# Step 3 - Update the command routing
 In this step you will route the `companySearch` command to the handler you implemented in the previous step.
 
 2. Open **searchApp.ts** and add the following. Underneath this line:
@@ -122,7 +122,7 @@ Add this statement:
 ```text
 Note that in the UI-based operation of the Message Extension / plugin, this command is explicitly called. However, when invoked by Microsoft 365 Copilot, the command is triggered by the Copilot orchestrator.
 ```
-# Step - 4 Implement Product Search by Company
+# Step 4 - Implement Product Search by Company
  You will implement a product search by Company name and return a list of the company's ordered products. Find this information using the tables below:
 
 | Table         | Find        | Look Up By    |
@@ -199,9 +199,11 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
 
 1. Delete the 'Northwest Inventory' app in Teams. This step is necessary since you are updating the manifest. Manifest updates require the app to be reinstalled. The cleanest way to do this is to first delete it in Teams.
 
-    a. In Teams, right click on '**Apps**' in the left rail, search for 'Northwest Inventory'. 
+    a. In the Teams sidebar, click on the three dots (...) 1️⃣. You should see Northwind Inventory 2️⃣ in the list of applications.
 
-    b. Right click on the 'Northwest Inventory' icon and select uninstall.
+    b. Right click on the 'Northwest Inventory' icon and select uninstall 3️⃣.
+
+    ![How to uninstall Northwind Inventory](./images/03-01-Uninstall-App.png)
 
 2. Like you did in [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin, start the app in Visual Studio Code using the **Debug in Teams (Edge)** profile.
 
