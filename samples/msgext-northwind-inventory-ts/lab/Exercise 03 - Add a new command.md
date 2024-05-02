@@ -190,9 +190,11 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
 
 1. Delete the 'Northwest Inventory' app in Teams. This step is necessary since you are updating the manifest. Manifest updates require the app to be reinstalled. The cleanest way to do this is to first delete it in Teams.
 
-    a. In Teams, right click on '**Apps**' in the left rail, search for 'Northwest Inventory'. 
+    a. In the Teams sidebar, click on the three dots (...) 1️⃣. You should see Northwind Inventory 2️⃣ in the list of applications.
 
-    b. Right click on the 'Northwest Inventory' icon and select uninstall.
+    b. Right click on the 'Northwest Inventory' icon and select uninstall 3️⃣.
+
+    ![How to uninstall Northwind Inventory](./images/03-01-Uninstall-App.png)
 
 2. Like you did in [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin, start the app in Visual Studio Code using the **Debug in Teams (Edge)** profile.
 
