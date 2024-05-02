@@ -90,15 +90,6 @@ Here's an abbreviated version of that JSON for easy reference.
                 "title": "Discounts",
                 "type": "query",
                 "parameters": [ ...]
-            },
-            {
-                "id": "revenueSearch",
-                ...
-                "id": "revenueSearch",
-                "description": "Find products based on their revenue/period",
-                "title": "Revenue",
-                "type": "query",
-                "parameters": [ ... ]
             }
         ]
     }
@@ -114,33 +105,6 @@ You already ran the first command when you searched for a product by name. You c
 Enter "Beverages", "Dairy", or "Produce" into the "Discounts" tab, and you'll see the products within those categories that are discounted. Copilot will use this to answer questions about discounted products.
 
 ![Searching for beverages under the discount tab](./images/02-03-Test-Multi-02.png)
-
-Enter "high", "low", "0-10000", or "100000-" in the Revenue tab. It works, but it's not very user friendly. Copilot is smarter and, in [Exercise 2](./Exercise%2002%20-%20Run%20in%20Copilot.md), we have seen how it can look at the manifest and figure out how to use it:
-
-~~~json
-{
-    "id": "revenueSearch",
-    "context": [
-        "compose",
-        "commandBox"
-    ],
-    "description": "Find products based on their revenue/period",
-    "title": "Revenue",
-    "type": "query",
-    "parameters": [
-        {
-            "name": "revenueRange",
-            "title": "Revenue range",
-            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
-            "inputType": "text"
-        }
-    ]
-}
-~~~
-
-![Searching for high on the revenue tab](./images/02-03-Test-Multi-03.png)
-
-The parameter `description` succinctly explains how the queries should be written, and we have learned in Exercise 2 how Copilot will read this to answer prompts calling for high revenue products, or products with less than 10,000 items.
 
 Now examine the first command again. You'll notice it has 5 parameters!
 

@@ -44,8 +44,6 @@ Here are some ideas for prompts to try. If you don't get the result you expect, 
 
 - *Who supplies discounted produce to Northwind?*
 
-- *Find high revenue products in Northwind. Have there been any ad campaigns for these products?*
-
   > [!NOTE]
   > The ad campaign details are in the [sample documents](./sampleDocs/).
 

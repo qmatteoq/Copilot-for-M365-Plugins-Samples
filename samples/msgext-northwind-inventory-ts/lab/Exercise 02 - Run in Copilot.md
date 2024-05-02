@@ -84,9 +84,7 @@ Here are some prompts to try that use only a single parameter of the message ext
 
 * "Find information about Chai in Northwind Inventory"
 
-* "Find discounted seafood in Northwind. Show a table with the products, supplier names, average discount rate, and revenue per period."
-
-* "Find high revenue Northwind products. Did we run any ad campaigns for them?"
+* "Find discounted seafood in Northwind. Show a table with the products, supplier names, and the average discount rate."
 
 See if this last one also locates any of the documents you uploaded to your OneDrive.
 

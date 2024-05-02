@@ -45,7 +45,7 @@ To do this you'll complete five tasks.
 }
 ```
 ```
-Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the discount/product/revenue/SearchCommand.ts files. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
+Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the discount/product/SearchCommand.ts files. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
 ```
 
 # Step 2 - Create a handler for the 'companySearch' command
@@ -100,7 +100,7 @@ In this step you will route the `companySearch` command to the handler you imple
 
 2. Open **searchApp.ts** and add the following. Underneath this line:
 ```javascript
-import revenueSearchCommand from "./messageExtensions/revenueSearchCommand";
+import discountedSearchCommand from "./messageExtensions/discountSearchCommand";
 ```
 Add this line:
 ```javascript
@@ -109,8 +109,8 @@ import customerSearchCommand from "./messageExtensions/customerSearchCommand";
 
 3. Underneath this statement:
 ```javascript
-      case revenueSearchCommand.COMMAND_ID: {
-        return revenueSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
+      case discountedSearchCommand.COMMAND_ID: {
+        return discountedSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
       }
 ```
 Add this statement:

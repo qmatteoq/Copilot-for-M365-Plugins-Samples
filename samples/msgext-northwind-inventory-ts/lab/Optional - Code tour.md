@@ -80,30 +80,7 @@ This message extension has three commands, which are defined in the `commands` a
 },
 ~~~
 
-This allows Copilot (or a user) to search for discounted products within a Northwind category. This command accepts a single parameter, `categoryName`. The 3rd command is similar.
-
-~~~json
-{
-    "id": "revenueSearch",
-    "context": [
-        "compose",
-        "commandBox"
-    ],
-    "description": "Find products based on their revenue/period",
-    "title": "Revenue",
-    "type": "query",
-    "parameters": [
-        {
-            "name": "revenueRange",
-            "title": "Revenue range",
-            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
-            "inputType": "text"
-        }
-    ]
-}
-~~~
-
-What's interesting here is that we invented a really simple query language here, which is explained in the description of the `revenueRange` parameter. Copilot is able to learn this language from the description and translate the intent of a prompt into the correct query.
+This allows Copilot (or a user) to search for discounted products within a Northwind category. This command accepts a single parameter, `categoryName`. 
 
 OK now let's move back to the first command, `inventorySearch`. It has 5 parameters, which allows for much more sophisticated queries.
 
@@ -187,9 +164,6 @@ The first of these is a Messaging Extension Query activity ("messaging extension
       case discountedSearchCommand.COMMAND_ID: {
         return discountedSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
       }
-      case revenueSearchCommand.COMMAND_ID: {
-        return revenueSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
-      }
     }
   }
 ~~~
@@ -208,7 +182,6 @@ import {
 } from "botbuilder";
 import productSearchCommand from "./messageExtensions/productSearchCommand";
 import discountedSearchCommand from "./messageExtensions/discountSearchCommand";
-import revenueSearchCommand from "./messageExtensions/revenueSearchCommand";
 import actionHandler from "./adaptiveCards/cardHandler";
 
 export class SearchApp extends TeamsActivityHandler {
@@ -228,9 +201,6 @@ export class SearchApp extends TeamsActivityHandler {
       }
       case discountedSearchCommand.COMMAND_ID: {
         return discountedSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
-      }
-      case revenueSearchCommand.COMMAND_ID: {
-        return revenueSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
       }
     }
 
