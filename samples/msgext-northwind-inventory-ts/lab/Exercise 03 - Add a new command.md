@@ -48,7 +48,7 @@ To do this you'll complete five tasks.
 Note: The "id" is the connection between the UI and the code. This value is defined as COMMAND_ID in the SearchCommand.ts file. See how each of these files has a unique COMMAND_ID that corresponds to the value of "id".
 ```
 
-# Step - 2 Create a handler for the 'companySearch' command
+# Step 2 - Create a handler for the 'companySearch' command
 We will use a lot of the code created for the other handlers. 
 
 1. In VS Code copy '**productSearchCommand.ts**' and paste into the same folder to create a copy. Rename this file **customerSearchCommand.ts**.
@@ -93,9 +93,9 @@ const COMMAND_ID = "companySearch";
     };
 }
 ```
-Note that you will implement `searchProductsByCustomer` in the next step.
+Note that you will implement `searchProductsByCustomer` in Step 4.
 
-# Step - 3 Update the command routing
+# Step 3 - Update the command routing
 In this step you will route the `companySearch` command to the handler you implemented in the previous step.
 
 2. Open **searchApp.ts** and add the following. Underneath this line:
@@ -122,7 +122,7 @@ Add this statement:
 ```text
 Note that in the UI-based operation of the Message Extension / plugin, this command is explicitly called. However, when invoked by Microsoft 365 Copilot, the command is triggered by the Copilot orchestrator.
 ```
-# Step - 4 Implement Product Search by Company
+# Step 4 - Implement Product Search by Company
  We will implement the search for products by Company name and return a list of products ordered by the company. 
 
 1. Open **.\src\northwindDB\products.ts**
