@@ -17,9 +17,8 @@ async function handleTeamsMessagingExtensionQuery(
 
     let companyName;
 
-    // For now we have the ability to pass parameters comma separated for testing until the UI supports it.
-    // So try to unpack the parameters but when issued from Copilot or the multi-param UI they will come
-    // in the parameters array.
+    // Validate the incoming query, making sure it's the 'companySearch' command
+    // The value of the 'companyName' parameter is the company name to search for
     if (query.parameters.length === 1 && query.parameters[0]?.name === "companyName") {
         [companyName] = (query.parameters[0]?.value.split(','));
     } else { 
