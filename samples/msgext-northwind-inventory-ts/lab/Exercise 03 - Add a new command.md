@@ -123,7 +123,16 @@ Add this statement:
 Note that in the UI-based operation of the Message Extension / plugin, this command is explicitly called. However, when invoked by Microsoft 365 Copilot, the command is triggered by the Copilot orchestrator.
 ```
 # Step - 4 Implement Product Search by Company
- We will implement the search for products by Company name and return a list of products ordered by the company. 
+ You will implement a product search by Company name and return a list of the company's ordered products. Find this information using the tables below:
+
+| Table         | Find        | Look Up By    |
+| ------------- | ----------- | ------------- |
+| Customer      | Customer Id | Customer Name |
+| Orders        | Order Id    | Customer Id   |
+| Order Details | Product       | Order Id      |
+
+Here's how it works: 
+Use the Customer table to find the Customer Id with the Customer Name. Query the Orders table with the Customer Id to retrieve the associated Order Ids. For each Order Id, find the associated products in the Order Details table. Finally, return a list of products ordered by the specified company name.
 
 1. Open **.\src\northwindDB\products.ts**
 
@@ -201,6 +210,16 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
 5. Enter the prompt: 
 ```
 What are the products ordered by 'Consolidated Holdings' in Northwind Inventory?
+```
+The Terminal output shows Copilot understood the query and executed the `companySearch` command, passing company name extracted by Copilot.
+![03-07-response-customer-search](./images/03-08-terminal-query-output.png)
+
+Here's the output in Copilot:
+![03-07-response-customer-search](./images/03-07-response-customer-search.png)
+
+Here are other prompts to try:
+```
+What are the products ordered by 'Consolidated Holdings' in Northwind Inventory? Please list the product name, price and supplier in a table.
 ```
 
 
