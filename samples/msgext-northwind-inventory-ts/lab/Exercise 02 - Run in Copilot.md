@@ -96,7 +96,7 @@ You may see citations of the Northwind data in 3 forms. If there's a single refe
 
 ![Adaptive card for Chai embedded in a Copilot response](./images/03-03a-response-on-chai.png)
 
-If there are multiple references, Copilot may show a small number next to each. You can hover over these numbers to display the adaptive card. Also, it may show a pull-down below the "Copy" button.
+If there are multiple references, Copilot may show a small number next to each. You can hover over these numbers to display the adaptive card. References will also be listed below the response.
 
 ![Reference numbers embedded in a Copilot response - hovering over the number shows the adaptive card](./images/03-03-Response-on-Chai.png)
 
