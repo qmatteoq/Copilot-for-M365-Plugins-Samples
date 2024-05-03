@@ -1,6 +1,5 @@
 import {
-    TABLE_NAME, Product, ProductEx, Supplier, Category, OrderDetail,
-    Order, Customer
+    TABLE_NAME, Product, ProductEx, Supplier, Category
 } from './model';
 
 import { TableClient, TableEntityResult } from "@azure/data-tables";
@@ -33,50 +32,6 @@ export async function searchProducts(productName: string, categoryName: string, 
     if (stockLevel) {
         result = result.filter((p) => isInRange(stockLevel, p.UnitsInStock));
     }
-
-    return result;
-}
-
-export async function searchProductsByCustomer(companyName: string): Promise<ProductEx[]> {
-
-    let result = await getAllProductsEx();
-
-    let customers = await loadReferenceData<Customer>(TABLE_NAME.CUSTOMER);
-    let customerId="";
-    for (const c in customers) {
-        if (customers[c].CompanyName.toLowerCase().includes(companyName.toLowerCase())) {
-            customerId = customers[c].CustomerID;
-            break;
-        }
-    }
-    
-    if (customerId === "") 
-        return [];
-
-    let orders = await loadReferenceData<Order>(TABLE_NAME.ORDER);
-    let orderdetails = await loadReferenceData<OrderDetail>(TABLE_NAME.ORDER_DETAIL);
-    // build an array orders by customer id
-    let customerOrders = [];
-    for (const o in orders) {
-        if (customerId === orders[o].CustomerID) {
-            customerOrders.push(orders[o]);
-        }
-    }
-    
-    let customerOrdersDetails = [];
-    // build an array order details customerOrders array
-    for (const od in orderdetails) {
-        for (const co in customerOrders) {
-            if (customerOrders[co].OrderID === orderdetails[od].OrderID) {
-                customerOrdersDetails.push(orderdetails[od]);
-            }
-        }
-    }
-
-    // Filter products by the ProductID in the customerOrdersDetails array
-    result = result.filter(product => 
-        customerOrdersDetails.some(order => order.ProductID === product.ProductID)
-    );
 
     return result;
 }

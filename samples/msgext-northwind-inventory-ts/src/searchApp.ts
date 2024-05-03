@@ -8,7 +8,6 @@ import {
 } from "botbuilder";
 import productSearchCommand from "./messageExtensions/productSearchCommand";
 import discountedSearchCommand from "./messageExtensions/discountSearchCommand";
-import customerSearchCommand from "./messageExtensions/customerSearchCommand";
 import actionHandler from "./adaptiveCards/cardHandler";
 import { CreateActionErrorResponse } from "./adaptiveCards/utils";
 
@@ -29,9 +28,6 @@ export class SearchApp extends TeamsActivityHandler {
       }
       case discountedSearchCommand.COMMAND_ID: {
         return discountedSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
-      }
-      case customerSearchCommand.COMMAND_ID: {
-        return customerSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
       }
     }
 

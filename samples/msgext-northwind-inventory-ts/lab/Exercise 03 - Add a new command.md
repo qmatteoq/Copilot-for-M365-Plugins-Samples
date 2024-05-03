@@ -20,6 +20,9 @@ To do this you'll complete five tasks.
 4. **Implement Product Search by Company** that returns a list of products ordered by that company.
 5. **Run the app** and search of products that were purchased by a specified company.
 
+Note: The completed exercise with all of the code changes can by found in the `.\src\completed.zip` file. This can be useful for troubleshooting purposes.
+If you ever need to reset your edits, you can overwrite your changes with the contents of the `.\src\start.zip` file. You can copy all of the folders underneath the `start` folder in the zip file to the `src` folder in the project.
+
 # Step 1 - Extend the Message Extension / plugin User Interface 
 
 1. Open **manifest.json** and add the following json immediately after the **discountSearch** command. Here you're adding to the **"commands"** array which defines the list of commands supported by the ME / plugin.
@@ -136,7 +139,7 @@ Use the Customer table to find the Customer Id with the Customer Name. Query the
 
 1. Open **.\src\northwindDB\products.ts**
 
-2. Update the `import` statement on line 1 to include Order and Customer. It should look as follows
+2. Update the `import` statement on line 1 to include OrderDetail, Order and Customer. It should look as follows
 ```javascript
 import {
     TABLE_NAME, Product, ProductEx, Supplier, Category, OrderDetail,
