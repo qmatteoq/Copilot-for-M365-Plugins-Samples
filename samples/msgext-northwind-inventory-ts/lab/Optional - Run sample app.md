@@ -100,7 +100,7 @@ Notice first that there's a bot ID. That's because Microsoft Teams uses the Azur
 
 Then there's a collection of commands. These correspond to the tabs in the search dialog in Teams. In this application, the commands are really intended for Copilot more than regular users!
 
-You already ran the first command when you searched for a product by name. You can try the other two now.
+You already ran the first command when you searched for a product by name. You can try the other one now.
 
 Enter "Beverages", "Dairy", or "Produce" into the "Discounts" tab, and you'll see the products within those categories that are discounted. Copilot will use this to answer questions about discounted products.
 
