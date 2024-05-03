@@ -231,7 +231,3 @@ You've completed the lab! If you still have time and you want to dig deeper into
 
 - [Optional - Code Tour](./Optional%20-%20Code%20tour.md) to learn more about the codebase and the key components of the application.
 - [Optional - Run sample app as a message extension](./Optional%20-%20Run%20sample%20app.md) to test the application as a Message Extension in Microsoft Teams and Outlook.
-
-
-
-tof
