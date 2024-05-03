@@ -14,7 +14,7 @@ In Exercise 3, you will learn how to add a new command to the application, so th
 
 The lab includes also two optional exercises:
 
-- A code tour, which will guide you through the codebase and explain the key components of the application. This exercise is optional since the lab instructors will take care of explaining the key components during the lab introduction.
+- A code tour, which will guide you through the codebase and explain the key components of the application. If you're doing this lab with the instructors, this exercise is optional since they will take care of explaining the key components during the lab introduction. If you're doing this lab on-demand, instead, it's highly recommended to follow this exercise to understand the codebase.
 - A guide to test the application as a [message extension](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) in Microsoft Teams and Outlook.
 The message extension allows users to find products and share them in conversations using adaptive cards. These cards allow users in the conversation to take actions such as updating the stock level or restocking a product; this is a huge convenience as people collaborate at work.
 

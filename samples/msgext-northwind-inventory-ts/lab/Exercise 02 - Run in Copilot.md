@@ -76,7 +76,7 @@ Check the lower left of the chat user interface, below the compose box. You shou
 
 For best results, start a new chat by typing "New chat" before each prompt or set of related prompts.
 
-During the introduction of the lab, the instructors have guided you to understand the basic building blocks of the messaging extension, by highlighting the relevant snippets in manifest and in code that powers up the experience. In case you need a refresh, you can take a look at the [code tour section of the lab](Optional%20-%20Code%20tour.md), which contains a detailed explanation of the project's structure.
+During the introduction of the lab, the instructors have guided you to understand the basic building blocks of the messaging extension, by highlighting the relevant snippets in manifest and in code that powers up the experience. In case you need a refresh, or if you're attending the lab on-demand, you can review the [code tour section of the lab](Optional%20-%20Code%20tour.md), which contains a detailed explanation of the project's structure.
 
 ![Copilot showing its new chat screen](./images/03-01-New-Chat.png)
 
@@ -122,11 +122,7 @@ The plugin code applies all three filters, providing a result set of just 4 prod
 
 ![Copilot produced a bulleted list of products with references](./images/03-06b-Find-Northwind-Beverages-with-more-than-100.png)
 
-Now try a follow-up prompt (without starting a new chat):
-
-"What are the payment terms for these suppliers?"
-
-This prompt won't use your plug-in but if it looks in your OneDrive files it should be able to find the payment terms with each supplier's contract.
+By using this prompt, Copilot might look also in your OneDrive files to find the payment terms with each supplier's contract. In this case, you will notice that some of the references won't have the Northwind Inventory icon, but the Word one.
 
 ![Copilot extracted payment terms from contracts in SharePoint](./images/03-06c-PaymentTerms.png)
 

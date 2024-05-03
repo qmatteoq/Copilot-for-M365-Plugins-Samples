@@ -208,7 +208,7 @@ export async function searchProductsByCustomer(companyName: string): Promise<Pro
 
     ![How to uninstall Northwind Inventory](./images/03-01-Uninstall-App.png)
 
-2. Like you did in [Exercise 2](./Exercise%2003%20-%20Run%20in%20Copilot.md) - Run the sample as a Copilot plugin, start the app in Visual Studio Code using the **Debug in Teams (Edge)** profile.
+2. Like you did in [Exercise 2 - Run the sample as a Copilot plugin](./Exercise%2003%20-%20Run%20in%20Copilot.md), start the app in Visual Studio Code using the **Debug in Teams (Edge)** profile.
 
 3. In Teams click on **Chat** and then **Copilot**. Copilot should be the top-most option.
 4. Click on the **Plugin icon** and select **Northwind Inventory** to enable the plugin.
@@ -226,7 +226,11 @@ Here are other prompts to try:
 ```
 What are the products ordered by 'Consolidated Holdings' in Northwind Inventory? Please list the product name, price and supplier in a table.
 ```
+## Congratulations
+You've completed the lab! If you still have time and you want to dig deeper into the project, you can follow the optional exercises.
 
+- [Optional - Code Tour](./Optional%20-%20Code%20tour.md) to learn more about the codebase and the key components of the application.
+- [Optional - Run sample app as a message extension](./Optional%20-%20Run%20sample%20app.md) to test the application as a Message Extension in Microsoft Teams and Outlook.
 
 
 
