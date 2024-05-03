@@ -57,7 +57,7 @@ Within this is a bot, with the ID supplied by Teams Toolkit.
 
 Message extensions communicate using the Azure Bot Framework; this provides a fast and secure communication channel between Microsoft 365 and your application. When you first ran your project, Teams Toolkit registered a bot, and will place its bot ID here.
 
-This message extension has two commands, which are defined in the `commands` array. Let's skip the first command for a moment since it's the most complex one. The second command looks like this:
+This message extension has two commands, which are defined in the `commands` array. If you have completed [Exercise 3](./Exercise%2003%20-%20Add%20a%20new%20command.md), there will be also a third one. Let's skip the first command for a moment since it's the most complex one. The second command looks like this:
 
 ~~~json
 {

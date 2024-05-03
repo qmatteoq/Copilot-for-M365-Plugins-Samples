@@ -6,11 +6,11 @@ In this lab, you'll learn to use Teams Message Extensions as plugins in Copilot 
 
 Northwind operates a specialty foods e-commerce business out of Walla Walla, Washington. In this lab, you will be working with the Northwind Inventory application, which provides access to product inventory and financial information.
 
-In Exercise 1, you'll set up your development environment and get the application running. For the purpose of this lab, you won't need to follow the instructions, since the environment is already set up for you. However, you can follow the instructions at home to set up your own environment.
+In **Exercise 1**, you'll set up your development environment and get the application running. For the purpose of this lab, you won't need to follow the instructions, since the environment is already set up for you. However, you can follow the instructions at home to set up your own environment.
 
-Then in Exercise 2 you'll run the application as a plugin for Copilot for Microsoft 365. You will experiment with various prompts and you will observe how the plugin gets invoked using different parameters. As you chat with Copilot, you can watch the developer console to see queries it's making.
+Then in **Exercise 2** you'll run the application as a plugin for Copilot for Microsoft 365. You will experiment with various prompts and you will observe how the plugin gets invoked using different parameters. As you chat with Copilot, you can watch the developer console to see queries it's making.
 
-In Exercise 3, you will learn how to add a new command to the application, so that you can expand the plugin capabilities and perform more tasks.
+In **Exercise 3**, you will learn how to add a new command to the application, so that you can expand the plugin capabilities and perform more tasks.
 
 The lab includes also two optional exercises:
 
