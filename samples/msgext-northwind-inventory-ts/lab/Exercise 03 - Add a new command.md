@@ -222,18 +222,6 @@ The Terminal output shows Copilot understood the query and executed the `company
 Here's the output in Copilot:
 ![03-07-response-customer-search](./images/03-07-response-customer-search.png)
 
-<!-- ## Troubleshooting tip:
-In Copilot, enable 'developer mode'. Developer mode provides information on the plugin selected by the Copilot orchestrator to respond to the prompt. It also shows the available functions in the plugin and the API call's status code.
-
-To enable developer mode, type the following into Copilot:
-```
--developer on
-```
-For additional information on common problems and how to fix them, see the  [troubleshooting](Troubleshooting.md) guide.
-
-Here's what the output looks like: SCREENSHOT NEEDED. Dev Mode currently not working.-->
-
-
 Here are other prompts to try:
 ```
 What are the products ordered by 'Consolidated Holdings' in Northwind Inventory? Please list the product name, price and supplier in a table.
