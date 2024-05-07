@@ -241,7 +241,7 @@ First, note that the module exports a constant `COMMAND_ID`, which contains the 
 
 Then it provides a function, `handleTeamsMessagingExtensionQuery()`, to handle incoming queries for discounted products by category.
 
-~~~json
+~~~typescript
 async function handleTeamsMessagingExtensionQuery(
     context: TurnContext,
     query: MessagingExtensionQuery
