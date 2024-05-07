@@ -37,19 +37,13 @@ Verify that you can find them by entering the word **agreement** in the search b
 
 ![Search box with the word agreement](./images/01-02-CheckSampleFiles.png)
 
-## Step 4 - Install and set up Teams Toolkit for Visual Studio Code
+## Step 4 - Set up Teams Toolkit for Visual Studio Code
 
-In this step, you'll install the current version of [Teams Toolkit for Visual Studio Code](https://learn.microsoft.com/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5). The easiest way to do this is from right inside of Visual Studio Code.
-
-> NOTE: Do not install the pre-release version as it hasn't been tested with this lab
+In this step, you'll open the sample project with the [Teams Toolkit for Visual Studio Code](https://learn.microsoft.com/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5). The easiest way to do this is from right inside of Visual Studio Code.
 
 Open your working folder in Visual Studio Code. You may be asked to trust the authors of this folder; if so, please do.
 
-In the left sidebar, select the Extensions icon1️⃣. Enter the word "teams" into the search box 2️⃣ and locate "Teams Toolkit" in the search results. Click "Install" 3️⃣.
-
-![Installing Teams Toolkit in Visual Studio Code](./images/01-04-Install-TTK-01.png)
-
-Now select the Teams Toolkit icon in the left 1️⃣ . If it offers options to create a new project, you're probably in the wrong folder. In the Visual Studio Code file menu select "Open Folder" and directly open the **C:\src\msgext-northwind-inventory-ts** folder. You should see sections for Accounts, Environment, etc. as shown below.
+In the left sidebar, you will find the Teams Toolkit icon 1️⃣. Click on it. If it offers options to create a new project, you're probably in the wrong folder. In the Visual Studio Code file menu select "Open Folder" and directly open the **C:\src\msgext-northwind-inventory-ts** folder. You should see sections for Accounts, Environment, etc. as shown below.
 
 Under "Accounts" click "Sign in to Microsoft 365"2️⃣ and log in with the Microsoft 365 account provided by the lab instructors. 
 
