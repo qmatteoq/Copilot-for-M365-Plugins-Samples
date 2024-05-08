@@ -61,7 +61,7 @@ We will use a lot of the code created for the other handlers.
 const COMMAND_ID = "companySearch";
 ```
 
-2. Replace the content of **handleTeamsMessagingExtensionQuery** with:
+3. Replace the content of **handleTeamsMessagingExtensionQuery** with:
 ```javascript
  {
     let companyName;
@@ -101,7 +101,7 @@ Note that you will implement `searchProductsByCustomer` in Step 4.
 # Step 3 - Update the command routing
 In this step you will route the `companySearch` command to the handler you implemented in the previous step.
 
-2. Open **searchApp.ts** and add the following. Underneath this line:
+1. Open **searchApp.ts** and add the following. Underneath this line:
 ```javascript
 import discountedSearchCommand from "./messageExtensions/discountSearchCommand";
 ```
@@ -110,7 +110,7 @@ Add this line:
 import customerSearchCommand from "./messageExtensions/customerSearchCommand";
 ```
 
-3. Underneath this statement:
+2. Underneath this statement:
 ```javascript
       case discountedSearchCommand.COMMAND_ID: {
         return discountedSearchCommand.handleTeamsMessagingExtensionQuery(context, query);
